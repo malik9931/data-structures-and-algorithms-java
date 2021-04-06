@@ -7,4 +7,5 @@ This repo contain challenges in the folowing topics:
 --------------------|:--------------------------------------------------------:|
 
 |Reverse-Array       | [Link](/challenges/ArrayReverse)|
-
+|Reverse-Array       |
+[Link](/challenges/ArrayShift)
