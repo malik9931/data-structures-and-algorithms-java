@@ -23,19 +23,23 @@ public class App {
         second.next = third;
         try {
             linkedList.insert("malek");
-            System.out.println(linkedList.includes("jas"));
+            System.out.println(linkedList.includes("a"));
+            linkedList.insertBefore("c","Before c");
+            linkedList.insertAfter("sd","After c");
+            linkedList.append("last");
             System.out.println(linkedList.toString());
+
 
         }catch (Exception ex){
             System.out.println("error in: "+ ex);
         }
 
         //printing the node
-        System.out.print("LinkedList: ");
-        while (linkedList.head != null){
-            System.out.print(linkedList.head.value+" ");
-            linkedList.head = linkedList.head.next;
-        }
+//        System.out.print("LinkedList: ");
+//        while (linkedList.head != null){
+//            System.out.print(linkedList.head.value+" ");
+//            linkedList.head = linkedList.head.next;
+//        }
 
     }
 }
