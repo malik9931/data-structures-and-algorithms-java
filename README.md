@@ -6,8 +6,12 @@ This repo contain challenges in the folowing topics:
 |SUBJECTS  |                 LINKS             |
 --------------------|:--------------------------------------------------------:|
 
-|Reverse-Array       | [Link](/challenges/ArrayReverse)
-|Reverse-Array       |
+|Reverse-Array| [Link](/challenges/ArrayReverse)
+|Shift-Array|
 [Link](/challenges/ArrayShift)
-|BinarySearch       |
+|BinarySearch|
 [Link](/challenges/BinarySearch)
+|Fibonacci Number|
+[Link](/challenges/FibonacciNumber)
+|Linked List Implementation|
+[Link](/Data-Structures2)
