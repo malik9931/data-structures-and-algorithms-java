@@ -23,3 +23,9 @@ insert(<Node type>): this method will  take any value as an argument and adds a 
 includes(<String>): this method will take any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
 
 toString(): this method takes in no arguments and returns a string representing all the values in the Linked List
+
+append(): adds a new node with the given value to the end of the list
+
+insertBefore(): add a new node with the given newValue immediately before the first value node
+
+insertAfter(): add a new node with the given newValue immediately after the first value node

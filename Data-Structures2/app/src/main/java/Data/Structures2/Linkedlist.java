@@ -3,19 +3,54 @@ package Data.Structures2;
 public class Linkedlist {
     Node head;
 
-//    public void append(String val){
-//        if(head == null){
-//            head = new Node(val);
-//            return;
-//        }
-//        Node current = head;
-//        while (current.next != null){
-//            current = current.next;
-//        }
-//        current.next = new Node(val);
-////        int current = val;
-////        if(head.v)
-//    }
+    public void append(String val){
+        if(head == null){
+            head = new Node(val);
+            return;
+        }
+        Node current = head;
+        while (current.next != null){
+            current = current.next;
+        }
+        Node lastNode = new Node(val);
+        current.next =  lastNode;
+//        lastNode.next = null;
+//        int current = val;
+//        if(head.v)
+    }
+
+    public void insertBefore(String value, String newVal){
+        Node current = head;
+        Node newValue = new Node(newVal);
+        if(head.value == value){
+            newValue.next = head;
+            head = newValue;
+        }
+        while (current.next != null && current.next.value != value){
+
+            current = current.next;
+        }
+        if(current.next != null){
+            Node afterNew = current.next;
+            current.next = newValue;
+            newValue.next = afterNew;
+            return;
+        }
+
+    }
+
+    public void insertAfter(String value, String newVal){
+        Node current = head;
+        Node newNode = new Node(newVal);
+        while (current != null && current.value != value){
+            current = current.next;
+        }
+        if(current != null){
+            newNode.next = current.next;
+            current.next = newNode;
+
+        }
+    }
 
     public boolean insert(String newHeadInsert){
         Node newHead = new Node(newHeadInsert);
@@ -40,13 +75,15 @@ public class Linkedlist {
     }
 
     public String toString(){
-        Node current = head;
         String result = "";
-        while (current.next != null){
-            result = result + "{ " + current.value +" } -> ";
-            current = current.next;
+
+        while (head != null){
+            result = result + "{ " + head.value +" } -> ";
+
+            head = head.next;
         }
         result = result+"NULL";
         return result;
+
     }
 }
