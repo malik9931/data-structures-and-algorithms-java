@@ -29,6 +29,7 @@ public class App {
             linkedList.insertBefore("last","Before last");
             linkedList.insertAfter("sd","After c");
             System.out.println(linkedList.toString());
+            System.out.println(linkedList.kthFromEnd(3));
 
 
         }catch (Exception ex){

@@ -74,6 +74,34 @@ public class Linkedlist<T> {
             return false;
     }
 
+    public String kthFromEnd(int k){
+        int elementsCounter = 0;
+        Node needed;
+//        if(head == null){
+//            return "no data";
+//        }else{
+            Node current = head;
+
+            while (current != null){
+                elementsCounter++;
+                current = current.next;
+            }
+            current = head;
+            Node prev= head;
+            for (int i = 0; i <  elementsCounter - k; i++) {
+                prev = current;
+                current = current.next;
+            }
+            needed = prev;
+//            return (int) needed.value;
+//            return elementsCounter;
+        return (String) head.value;
+
+    }
+
+
+//    }
+
     public String toString(){
         String result = "";
 
