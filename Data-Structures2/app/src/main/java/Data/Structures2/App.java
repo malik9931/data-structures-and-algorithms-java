@@ -22,11 +22,12 @@ public class App {
         linkedList.head.next = second;
         second.next = third;
         try {
-            linkedList.insert("malek");
+            linkedList.insert("first");
             System.out.println(linkedList.includes("a"));
-            linkedList.insertBefore("c","Before c");
-            linkedList.insertAfter("sd","After c");
+            linkedList.insertBefore("first","Before first");
             linkedList.append("last");
+            linkedList.insertBefore("last","Before last");
+            linkedList.insertAfter("sd","After c");
             System.out.println(linkedList.toString());
 
 
