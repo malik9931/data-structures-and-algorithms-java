@@ -1,7 +1,7 @@
 package Data.Structures2;
 
-public class Linkedlist {
-    Node head;
+public class Linkedlist<T> {
+    Node<T> head;
 
     public void append(String val){
         if(head == null){
@@ -20,8 +20,8 @@ public class Linkedlist {
     }
 
     public void insertBefore(String value, String newVal){
-        Node current = head;
-        Node newValue = new Node(newVal);
+        Node<T> current = head;
+        Node<T> newValue = new Node(newVal);
         if(head.value == value){
             newValue.next = head;
             head = newValue;
@@ -52,7 +52,7 @@ public class Linkedlist {
         }
     }
 
-    public boolean insert(String newHeadInsert){
+    public boolean insert(T newHeadInsert){
         Node newHead = new Node(newHeadInsert);
         newHead.next = head;
         head = newHead;
