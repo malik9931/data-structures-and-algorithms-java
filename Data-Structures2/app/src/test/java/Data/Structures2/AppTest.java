@@ -8,19 +8,10 @@ import static org.junit.Assert.*;
 
 public class AppTest{
     // Testing instantiate an empty linked list
-    @Test public void testNode() throws Exception{
+    @Test public void testLinkedList(){
 
-            Linkedlist testLinkedList = new Linkedlist();
-        Node one = new Node("Hello");
-//        testLinkedList.insert(one);
-
-//        boolean actual = linkedList2.head.value.isEmpty();
-
-//        System.out.println("The Expectet out-put for tetting the linked list is empty or not will be: "+true+" and the actual is: "+actual);
-//        assertTrue("The Expectet out-put for tetting the linked list is empty or not will be: ",actual);
-            assertEquals("The Expectet out-put for tetting the linked list is empty or not will be:","NULL",testLinkedList.toString());
-
+        System.out.println("sssssssss");
+    }
 
 
     }
-}
