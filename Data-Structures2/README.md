@@ -29,3 +29,7 @@ append(): adds a new node with the given value to the end of the list
 insertBefore(): add a new node with the given newValue immediately before the first value node
 
 insertAfter(): add a new node with the given newValue immediately after the first value node
+
+
+## Solution
+![whiteboard](../assets/Linked-List.JPG)
