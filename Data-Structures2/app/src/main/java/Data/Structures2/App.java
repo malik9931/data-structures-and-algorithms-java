@@ -14,9 +14,9 @@ public class App {
 
 
         //Assign the head of linkedList1
-        linkedList1.head = new Node(1);
-        Node second = new Node(2);
-        Node third = new Node(3);
+//        Node first = linkedList1.head = new Node(1);
+//        Node second = new Node(2);
+//        Node third = new Node(3);
 
         //Assign the head of linkedList2
 //        linkedList1.head = new Node("1");
@@ -25,8 +25,8 @@ public class App {
 
 
         //connecting the nodes
-        linkedList1.head.next = second;
-        second.next = third;
+//        linkedList1.head.next = second;
+//        second.next = third;
 
         //connecting the nodes
 //        linkedList2.head.next = two;
@@ -34,20 +34,29 @@ public class App {
         try {
 
             linkedList1.insert(9);
-            System.out.println(linkedList1.includes(1));
-            linkedList1.insertBefore(1,12);
-            linkedList1.append(111);
-            linkedList1.insertBefore(2,45);
-            linkedList1.insertAfter(3,2);
+            linkedList1.insert(1);
+            linkedList1.insert(3);
+
+
+            //            System.out.println(linkedList1.includes(1));
+//            linkedList1.insertBefore(1,12);
+//            linkedList1.append(2);
+//            linkedList1.append(1);
+//            linkedList1.append(1);
+
+//            linkedList1.insertBefore(2,45);
+//            linkedList1.insertAfter(3,2);
             System.out.println(linkedList1);
-            System.out.println(linkedList1.kthFromEnd(2));
+            System.out.println(linkedList1.size());
+            System.out.println(linkedList1.kthFromEnd(3));
+//            System.out.println(Linkedlist.palindrome(first));
 
             //Merging
 //            System.out.println(Linkedlist.zipLists(linkedList1,linkedList2));
 
 
         }catch (Exception ex){
-            System.out.println("error in: "+ ex);
+            System.out.println("error is: "+ ex);
         }
 
         //printing the node
