@@ -1,27 +1,50 @@
 package Data.Structures2;
 
-public class Linkedlist<T> {
-    Node<T> head;
+public class Linkedlist{
+    Node head;
 
-    public void append(String val){
+//------------------------ First Code ----------------------------
+    public boolean insert( int newHeadInsert){
+        Node newHead = new Node(newHeadInsert);
+        newHead.next = head;
+        head = newHead;
+        return true;
+    }
+
+    public boolean includes(int data){
         if(head == null){
-            head = new Node(val);
-            return;
+            head = new Node(data);
         }
+        Node serchData = new Node(data);
         Node current = head;
         while (current.next != null){
+            if(current.value == serchData.value){
+                return true;
+            }
             current = current.next;
         }
-        Node lastNode = new Node(val);
-        current.next =  lastNode;
+            return false;
+    }
+// ----------------------------- 2nd Challenge -------------------------------
+public void append(int val){
+    if(head == null){
+        head = new Node(val);
+        return;
+    }
+    Node current = head;
+    while (current.next != null){
+        current = current.next;
+    }
+    Node lastNode = new Node(val);
+    current.next =  lastNode;
 //        lastNode.next = null;
 //        int current = val;
 //        if(head.v)
-    }
+}
 
-    public void insertBefore(String value, String newVal){
-        Node<T> current = head;
-        Node<T> newValue = new Node(newVal);
+    public void insertBefore(int value, int newVal){
+        Node current = head;
+        Node newValue = new Node(newVal);
         if(head.value == value){
             newValue.next = head;
             head = newValue;
@@ -39,7 +62,7 @@ public class Linkedlist<T> {
 
     }
 
-    public void insertAfter(String value, String newVal){
+    public void insertAfter(int value, int newVal){
         Node current = head;
         Node newNode = new Node(newVal);
         while (current != null && current.value != value){
@@ -52,29 +75,10 @@ public class Linkedlist<T> {
         }
     }
 
-    public boolean insert(T newHeadInsert){
-        Node newHead = new Node(newHeadInsert);
-        newHead.next = head;
-        head = newHead;
-        return true;
-    }
 
-    public boolean includes(String data){
-        if(head == null){
-            head = new Node(data);
-        }
-        Node serchData = new Node(data);
-        Node current = head;
-        while (current.next != null){
-            if(current.value == serchData.value){
-                return true;
-            }
-            current = current.next;
-        }
-            return false;
-    }
+//------------------------------- 3rd Challenge ----------------------------------
 
-    public String kthFromEnd(int k){
+    public int kthFromEnd(int k){
         int elementsCounter = 0;
         Node needed;
 //        if(head == null){
@@ -95,9 +99,11 @@ public class Linkedlist<T> {
             needed = prev;
 //            return (int) needed.value;
 //            return elementsCounter;
-        return (String) head.value;
+        return head.value;
 
     }
+
+// --------------------------------------- 4th Challenge --------------------------------
 
     public static Linkedlist zipLists(Linkedlist one, Linkedlist two){
         Node oneCurr = one.head;
