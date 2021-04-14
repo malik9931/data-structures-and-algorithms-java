@@ -5,6 +5,10 @@ public class Linkedlist{
 
 //------------------------ First Code ----------------------------
     public boolean insert( int newHeadInsert){
+        if(head == null){
+            head = new Node(newHeadInsert);
+            return true;
+        }
         Node newHead = new Node(newHeadInsert);
         newHead.next = head;
         head = newHead;
@@ -37,9 +41,6 @@ public void append(int val){
     }
     Node lastNode = new Node(val);
     current.next =  lastNode;
-//        lastNode.next = null;
-//        int current = val;
-//        if(head.v)
 }
 
     public void insertBefore(int value, int newVal){
@@ -79,27 +80,17 @@ public void append(int val){
 //------------------------------- 3rd Challenge ----------------------------------
 
     public int kthFromEnd(int k){
-        int elementsCounter = 0;
-        Node needed;
-//        if(head == null){
-//            return "no data";
-//        }else{
-            Node current = head;
-
-            while (current != null){
-                elementsCounter++;
-                current = current.next;
-            }
-            current = head;
-            Node prev= head;
-            for (int i = 0; i <  elementsCounter - k; i++) {
-                prev = current;
-                current = current.next;
-            }
-            needed = prev;
-//            return (int) needed.value;
-//            return elementsCounter;
-        return head.value;
+        if (k >= size()){
+            return -1;
+        }
+        int nodeToGet = this.size() - k;
+        int counter = 1;
+        Node current = head;
+        while (counter < nodeToGet){
+            counter++;
+            current = current.next;
+        }
+        return current.value;
 
     }
 
@@ -126,14 +117,60 @@ public void append(int val){
 
         return two;
     }
+//------------------ palindrome Challenge ---------------
+    public static boolean palindrome(Node head){
 
+        if(head == null){
+            return true;
+        }
+        Node fast = head;
+        Node slow = head;
+        while (fast.next != null && fast.next.next!=null){
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        Node secondHalfHead = reverse(slow.next);
+        Node firstHalfHead = head;
+        while (firstHalfHead != null && secondHalfHead != null){
+            if(firstHalfHead.value != secondHalfHead.value){
+                return false;
+            }
+            secondHalfHead = secondHalfHead.next;
+            firstHalfHead = firstHalfHead.next;
+        }
+        return true;
+    }
+
+    private static Node reverse(Node head) {
+        Node newHead = null;
+        while (head != null){
+            Node next = head.next;
+            head.next = newHead;
+            newHead = head;
+            head = next;
+        }
+        return newHead;
+    }
+
+    // -------------------- size Function ---------------------
+
+    public int size(){
+        int size = 0;
+        Node current = head;
+        while (current != null){
+            size++;
+            current = current.next;
+        }
+        return size;
+    }
+//----------------- toString Function ----------------------
     public String toString(){
         String result = "";
+        Node current = head;
+        while (current != null){
+            result = result + "{ " + current.value +" } -> ";
 
-        while (head != null){
-            result = result + "{ " + head.value +" } -> ";
-
-            head = head.next;
+            current = current.next;
         }
         result = result+"NULL";
         return result;
