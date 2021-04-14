@@ -99,8 +99,27 @@ public class Linkedlist<T> {
 
     }
 
+    public static Linkedlist zipLists(Linkedlist one, Linkedlist two){
+        Node oneCurr = one.head;
+        Node twoCurr = two.head;
 
-//    }
+        Node oneNext;
+        Node twoNext;
+
+        while (oneCurr != null && twoCurr != null){
+            oneNext = oneCurr.next;
+            twoNext = twoCurr.next;
+
+            oneCurr.next = twoNext;
+            twoCurr.next = oneNext;
+
+            oneCurr=oneNext;
+            twoCurr=twoNext;
+
+        }
+
+        return two;
+    }
 
     public String toString(){
         String result = "";
