@@ -1,13 +1,13 @@
 package Data.Structures2;
 
-public class Node<T> {
+public class Node {
     Node next;
-    T value;
+    int value;
 //    private int next;
 
     // Connect each Node with the next Node
 
-    public Node(T val){
+    public Node(int val){
         this.value = val;
 //        next = null;
     }

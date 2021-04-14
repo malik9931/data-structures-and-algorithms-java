@@ -14,14 +14,14 @@ public class App {
 
 
         //Assign the head of linkedList1
-        linkedList1.head = new Node("a");
-        Node second = new Node("b");
-        Node third = new Node("c");
+        linkedList1.head = new Node(1);
+        Node second = new Node(2);
+        Node third = new Node(3);
 
         //Assign the head of linkedList2
-        linkedList1.head = new Node("1");
-        Node two = new Node("2");
-        Node three = new Node("3");
+//        linkedList1.head = new Node("1");
+//        Node two = new Node("2");
+//        Node three = new Node("3");
 
 
         //connecting the nodes
@@ -29,18 +29,18 @@ public class App {
         second.next = third;
 
         //connecting the nodes
-        linkedList2.head.next = two;
-        two.next = three;
+//        linkedList2.head.next = two;
+//        two.next = three;
         try {
 
-            linkedList1.insert("first");
-            System.out.println(linkedList1.includes("a"));
-            linkedList1.insertBefore("first","Before first");
-            linkedList1.append("last");
-            linkedList1.insertBefore("last","Before last");
-            linkedList1.insertAfter("sd","After c");
-            System.out.println(linkedList1.toString());
-//            System.out.println(linkedList1.kthFromEnd(3));
+            linkedList1.insert(9);
+            System.out.println(linkedList1.includes(1));
+            linkedList1.insertBefore(1,12);
+            linkedList1.append(111);
+            linkedList1.insertBefore(2,45);
+            linkedList1.insertAfter(3,2);
+            System.out.println(linkedList1);
+            System.out.println(linkedList1.kthFromEnd(2));
 
             //Merging
 //            System.out.println(Linkedlist.zipLists(linkedList1,linkedList2));
