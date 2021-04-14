@@ -13,6 +13,12 @@ public class App {
         Linkedlist linkedList2 = new Linkedlist();
 
 
+        //Inserting Data for linkedList2
+        linkedList2.insert(11);
+        linkedList2.insert(22);
+        linkedList2.insert(33);
+
+
         //Assign the head of linkedList1
 //        Node first = linkedList1.head = new Node(1);
 //        Node second = new Node(2);
@@ -47,12 +53,18 @@ public class App {
 //            linkedList1.insertBefore(2,45);
 //            linkedList1.insertAfter(3,2);
             System.out.println(linkedList1);
+
+            System.out.println(linkedList2);
+
+//            System.out.println(linkedList1.kthFromEnd(2));
+
             System.out.println(linkedList1.size());
             System.out.println(linkedList1.kthFromEnd(3));
 //            System.out.println(Linkedlist.palindrome(first));
 
+
             //Merging
-//            System.out.println(Linkedlist.zipLists(linkedList1,linkedList2));
+            System.out.println(Linkedlist.zipLists(linkedList1,linkedList2));
 
 
         }catch (Exception ex){
