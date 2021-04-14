@@ -4,32 +4,46 @@
 package Data.Structures2;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+
 
     public static void main(String[] args) {
 
 // create an object of a linkedList
-        Linkedlist linkedList = new Linkedlist();
-//
-        //Assign the head
-        linkedList.head = new Node("a");
+        Linkedlist linkedList1 = new Linkedlist();
+        Linkedlist linkedList2 = new Linkedlist();
+
+
+        //Assign the head of linkedList1
+        linkedList1.head = new Node("a");
         Node second = new Node("b");
         Node third = new Node("c");
 
+        //Assign the head of linkedList2
+        linkedList1.head = new Node("1");
+        Node two = new Node("2");
+        Node three = new Node("3");
+
+
         //connecting the nodes
-        linkedList.head.next = second;
+        linkedList1.head.next = second;
         second.next = third;
+
+        //connecting the nodes
+        linkedList2.head.next = two;
+        two.next = three;
         try {
-            linkedList.insert("first");
-            System.out.println(linkedList.includes("a"));
-            linkedList.insertBefore("first","Before first");
-            linkedList.append("last");
-            linkedList.insertBefore("last","Before last");
-            linkedList.insertAfter("sd","After c");
-            System.out.println(linkedList.toString());
-            System.out.println(linkedList.kthFromEnd(3));
+
+            linkedList1.insert("first");
+            System.out.println(linkedList1.includes("a"));
+            linkedList1.insertBefore("first","Before first");
+            linkedList1.append("last");
+            linkedList1.insertBefore("last","Before last");
+            linkedList1.insertAfter("sd","After c");
+            System.out.println(linkedList1.toString());
+//            System.out.println(linkedList1.kthFromEnd(3));
+
+            //Merging
+//            System.out.println(Linkedlist.zipLists(linkedList1,linkedList2));
 
 
         }catch (Exception ex){
