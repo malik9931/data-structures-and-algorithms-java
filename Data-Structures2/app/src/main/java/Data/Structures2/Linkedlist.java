@@ -17,7 +17,7 @@ public class Linkedlist{
 
     public boolean includes(int data){
         if(head == null){
-            head = new Node(data);
+            return false;
         }
         Node serchData = new Node(data);
         Node current = head;
@@ -115,7 +115,7 @@ public void append(int val){
 
         }
 
-        return two;
+        return one;
     }
 //------------------ palindrome Challenge ---------------
     public static boolean palindrome(Node head){
