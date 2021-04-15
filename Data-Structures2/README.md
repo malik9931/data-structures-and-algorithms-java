@@ -52,4 +52,42 @@ finally it will return the purposed node value.
 ## Solution
 ![whiteboard](../assets/k-th.JPG)
 
+----------------------------------------------------------------------------------------------
+# Code Challenge: Class 10
+# Stacks and Queues
+Implementation: Stacks and Queues Lists
 
+## Challenge
+###### Stack
+Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
+Within your Stack class, include a Top property. Upon instantiation, an empty Stack should be created.
+Define a method called push which takes any value as an argument and adds a new node with that value to the top of the stack with an O(1) Time performance.
+Define a method called pop that does not take any argument, removes the node from the top of the stack, and returns the node’s value.
+Define a method called peek that does not take an argument and returns the value of the node located on top of the stack, without removing it from the stack.
+Define a method called isEmpty that takes no argument, and returns a boolean indicating whether or not the stack is empty.
+
+###### Queue
+Create a Queue class that has a front property. It creates an empty Queue when instantiated.
+This object should be aware of a default empty value assigned to front when the queue is created.
+Define a method called enqueue which takes any value as an argument and adds a new node with that value to the back of the queue with an O(1) Time performance.
+Define a method called dequeue that does not take any argument, removes the node from the front of the queue, and returns the node’s value.
+Define a method called peek that does not take an argument and returns the value of the node located in the front of the queue, without removing it from the queue.
+Define a method called isEmpty that takes no argument, and returns a boolean indicating whether or not the queue is empty.
+
+## Approach & Efficiency
+built with object-oriented programming by creating 2-classes one for the linked list, and the other for the Node
+the Big O for the methods is O(1) for time.
+
+## API
+###### Stack
+Push - Nodes or items that are put into the stack are pushed
+Pop - Nodes or items that are removed from the stack are popped. When you attempt to pop an empty stack an exception will be raised.
+Peek - When you peek you will view the value of the top Node in the stack. When you attempt to peek an empty stack an exception will be raised.
+IsEmpty - returns true when stack is empty otherwise returns false.
+
+
+###### Queue
+Enqueue - Nodes or items that are added to the queue.
+Dequeue - Nodes or items that are removed from the queue. If called when the queue is empty an exception will be raised.
+Peek - When you peek you will view the value of the front Node in the queue. If called when the queue is empty an exception will be raised.
+IsEmpty - returns true when queue is empty otherwise returns false.
