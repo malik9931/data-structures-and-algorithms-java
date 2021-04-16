@@ -17,16 +17,16 @@ public class Linkedlist {
 ////        if(head.v)
 //    }
 
-    public boolean insert(String newHeadInsert){
+    public boolean insert(int newHeadInsert){
         Node newHead = new Node(newHeadInsert);
         newHead.next = head;
         head = newHead;
         return true;
     }
 
-    public boolean includes(String data){
+    public boolean includes(int data){
         if(head == null){
-            head = new Node(data);
+            return false;
         }
         Node serchData = new Node(data);
         Node current = head;
@@ -36,7 +36,7 @@ public class Linkedlist {
             }
             current = current.next;
         }
-            return false;
+        return false;
     }
 
     public String toString(){

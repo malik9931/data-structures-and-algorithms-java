@@ -10,32 +10,24 @@ public class App {
 
     public static void main(String[] args) {
 
-// create an object of a linkedList
-        Linkedlist linkedList = new Linkedlist();
-//
-        //Assign the head
-        linkedList.head = new Node("a");
-        Node second = new Node("b");
-        Node third = new Node("c");
 
-        //connecting the nodes
-        linkedList.head.next = second;
-        second.next = third;
         try {
-            linkedList.insert("malek");
-            System.out.println(linkedList.includes("jas"));
-            System.out.println(linkedList.toString());
+            Linkedlist linkedList1 = new Linkedlist();
+            Linkedlist linkedList2 = new Linkedlist();
+
+
+            //Inserting Data for linkedList2
+            linkedList2.insert(11);
+            linkedList2.insert(22);
+            linkedList2.insert(33);
+
+
 
         }catch (Exception ex){
             System.out.println("error in: "+ ex);
         }
 
-        //printing the node
-        System.out.print("LinkedList: ");
-        while (linkedList.head != null){
-            System.out.print(linkedList.head.value+" ");
-            linkedList.head = linkedList.head.next;
-        }
+
 
     }
 }

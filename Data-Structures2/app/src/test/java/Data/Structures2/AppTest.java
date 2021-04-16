@@ -7,20 +7,39 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest{
-    // Testing instantiate an empty linked list
-    @Test public void testNode() throws Exception{
+    public static void main(String[] args) {
 
-            Linkedlist testLinkedList = new Linkedlist();
-        Node one = new Node("Hello");
-//        testLinkedList.insert(one);
+        testLinkedList();
+    }
+    @Test public static void testLinkedList() {
 
-//        boolean actual = linkedList2.head.value.isEmpty();
+        Linkedlist linkedList=new Linkedlist();
+        linkedList.insert(1);
+        linkedList.insert(2);
+        linkedList.insert(3);
+//        System.out.println("The Expected: "+"{ 3 } -> { 2 } -> { 1 } -> Null"+", The Actual: "+linkedList);
+//        System.out.println("The Expected false,"+" The Actual: "+linkedList.includes(4));
+//        System.out.println("The Expected true, The Actual: "+linkedList.includes(3));
+        // ----------------------------- 2nd Challenge -------------------------------
+        linkedList.append(5);
+        System.out.println("The Expected: "+"{ 3 } -> { 2 } -> { 1 } -> { 5 } -> NULL"+", The Actual: "+linkedList);
+        linkedList.insertBefore(3,77);
+        assertEquals(3,linkedList.kthFromEnd(3));
+        System.out.println("The Expected: "+"{ 77 } -> { 3 } -> { 2 } -> { 1 } -> { 5 } -> NULL"+", The Actual: "+linkedList);
+        linkedList.insertAfter(2,11);
+        System.out.println("The Expected: "+"{ 77 } -> { 3 } -> { 2 } -> { 11 } -> { 1 } -> { 5 } -> NULL"+", The Actual: "+linkedList);
+        // ----------------------------- 3rd Challenge -------------------------------
+        System.out.println("The Expected: "+2+", The Actual: "+linkedList.kthFromEnd(3));
+        assertEquals(2,linkedList.kthFromEnd(3));
+        // ----------------------------- 4th Challenge -------------------------------
 
-//        System.out.println("The Expectet out-put for tetting the linked list is empty or not will be: "+true+" and the actual is: "+actual);
-//        assertTrue("The Expectet out-put for tetting the linked list is empty or not will be: ",actual);
-            assertEquals("The Expectet out-put for tetting the linked list is empty or not will be:","NULL",testLinkedList.toString());
-
-
+        //------------------ palindrome Challenge ---------------
+        Node first = new Node(0);
+        linkedList.insert(first.value);
+        System.out.println(linkedList);
+        System.out.println(Linkedlist.palindrome(first));
 
     }
+
+
 }
