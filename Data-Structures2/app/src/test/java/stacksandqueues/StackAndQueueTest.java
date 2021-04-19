@@ -42,4 +42,20 @@ public class StackAndQueueTest {
 
     }
 
+    @Test public void getTestPseudoQueue() throws Exception {
+        PseudoQueue newPseudoQueue = new PseudoQueue();
+        newPseudoQueue.enqueue(1);
+        newPseudoQueue.enqueue(2);
+        newPseudoQueue.enqueue(3);
+
+
+
+        assertEquals(  1,newPseudoQueue.dequeue());
+        assertEquals("PseudoQueue{inputStack=NULL, outputStack={ 2 } -> { 3 } -> NULL}",newPseudoQueue.toString());
+        assertEquals(  2,newPseudoQueue.dequeue());
+        System.out.println(newPseudoQueue.dequeue());
+        System.out.println(newPseudoQueue.toString());
+        assertEquals("PseudoQueue{inputStack=NULL, outputStack=NULL}",newPseudoQueue.toString());
+
+    }
 }

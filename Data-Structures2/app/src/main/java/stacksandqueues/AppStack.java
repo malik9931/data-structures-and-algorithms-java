@@ -20,11 +20,24 @@ public class AppStack {
             //----------------------------------QUEUE PART--------------------------
             Queue newQueue = new Queue();
             newQueue.enqueue(1);
-            System.out.println(newQueue);
-            System.out.println(newQueue.dequeue());
-            System.out.println(newQueue.dequeue());
+//            System.out.println(newQueue);
+//            System.out.println(newQueue.dequeue());
+//            System.out.println(newQueue.dequeue());
+//
+//            System.out.println(newQueue.isEmpty());
 
-            System.out.println(newQueue.isEmpty());
+            //----------------------------------Implement a Queue using two stacks PART--------------------------
+            PseudoQueue newPseudoQueue = new PseudoQueue();
+            newPseudoQueue.enqueue(1);
+            newPseudoQueue.enqueue(2);
+            newPseudoQueue.enqueue(3);
+            newPseudoQueue.enqueue(4);
+
+            System.out.println(newPseudoQueue.toString());
+            System.out.println(newPseudoQueue.dequeue());
+            System.out.println(newPseudoQueue.dequeue());
+            System.out.println(newPseudoQueue.dequeue());
+
 
 
 
