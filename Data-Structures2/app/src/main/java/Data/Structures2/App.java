@@ -58,8 +58,8 @@ public class App {
 
 //            System.out.println(linkedList1.kthFromEnd(2));
 
-            System.out.println(linkedList1.size());
-            System.out.println(linkedList1.kthFromEnd(3));
+//            System.out.println(linkedList1.size());
+//            System.out.println(linkedList1.kthFromEnd(3));
 //            System.out.println(Linkedlist.palindrome(first));
 
 

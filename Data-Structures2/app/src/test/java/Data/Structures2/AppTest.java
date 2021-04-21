@@ -7,10 +7,38 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class AppTest{
-    // Testing instantiate an empty linked list
-    @Test public void testLinkedList(){
+    public static void main(String[] args) {
 
-        System.out.println("sssssssss");
+        testLinkedList();
+    }
+    @Test public static void testLinkedList() {
+
+        Linkedlist linkedList=new Linkedlist();
+        linkedList.insert(1);
+        linkedList.insert(2);
+        linkedList.insert(3);
+//        System.out.println("The Expected: "+"{ 3 } -> { 2 } -> { 1 } -> Null"+", The Actual: "+linkedList);
+//        System.out.println("The Expected false,"+" The Actual: "+linkedList.includes(4));
+//        System.out.println("The Expected true, The Actual: "+linkedList.includes(3));
+        // ----------------------------- 2nd Challenge -------------------------------
+        linkedList.append(5);
+        System.out.println("The Expected: "+"{ 3 } -> { 2 } -> { 1 } -> { 5 } -> NULL"+", The Actual: "+linkedList);
+        linkedList.insertBefore(3,77);
+        assertEquals(3,linkedList.kthFromEnd(3));
+        System.out.println("The Expected: "+"{ 77 } -> { 3 } -> { 2 } -> { 1 } -> { 5 } -> NULL"+", The Actual: "+linkedList);
+        linkedList.insertAfter(2,11);
+        System.out.println("The Expected: "+"{ 77 } -> { 3 } -> { 2 } -> { 11 } -> { 1 } -> { 5 } -> NULL"+", The Actual: "+linkedList);
+        // ----------------------------- 3rd Challenge -------------------------------
+        System.out.println("The Expected: "+2+", The Actual: "+linkedList.kthFromEnd(3));
+        assertEquals(2,linkedList.kthFromEnd(3));
+        // ----------------------------- 4th Challenge -------------------------------
+
+        //------------------ palindrome Challenge ---------------
+        Node first = new Node(0);
+        linkedList.insert(first.value);
+        System.out.println(linkedList);
+        System.out.println(Linkedlist.palindrome(first));
+
     }
 
 

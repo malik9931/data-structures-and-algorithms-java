@@ -17,7 +17,7 @@ public class Linkedlist{
 
     public boolean includes(int data){
         if(head == null){
-            head = new Node(data);
+            return false;
         }
         Node serchData = new Node(data);
         Node current = head;
