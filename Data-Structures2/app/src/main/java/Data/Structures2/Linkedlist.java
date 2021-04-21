@@ -97,22 +97,26 @@ public void append(int val){
 // --------------------------------------- 4th Challenge --------------------------------
 
     public static Linkedlist zipLists(Linkedlist one, Linkedlist two){
-        Node oneCurr = one.head;
-        Node twoCurr = two.head;
+        Node current1 = one.head;
+        Node current2 = two.head;
+        Node temp = null;
 
-        Node oneNext;
-        Node twoNext;
+        if (current1 == null){
+            return two;
+        }
 
-        while (oneCurr != null && twoCurr != null){
-            oneNext = oneCurr.next;
-            twoNext = twoCurr.next;
-
-            oneCurr.next = twoNext;
-            twoCurr.next = oneNext;
-
-            oneCurr=oneNext;
-            twoCurr=twoNext;
-
+        while (current1 != null && current2 != null){
+            if(current1 != null){
+                temp = current1.next;
+                current1.next = current2;
+                current1 = temp;
+            }
+            if (current2 != null){
+                temp = current2.next;
+                if (current1 != null)
+                    current2.next = current1;
+                current2=temp;
+            }
         }
 
         return one;

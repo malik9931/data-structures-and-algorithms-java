@@ -64,6 +64,9 @@ public class App {
 
 
             //Merging
+            System.out.println(linkedList1);
+            System.out.println(linkedList2);
+
             System.out.println(Linkedlist.zipLists(linkedList1,linkedList2));
 
 
