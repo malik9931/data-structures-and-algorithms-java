@@ -134,3 +134,27 @@ We will Reverse the input Stack to get an output Stack, which we will use it to 
 ### Solution
 ![whiteboard](../assets/PseudoQueue.JPG)
 
+-------------------------------------------------------------------
+# Code Challenge: Class 13
+### Challenge Summary
+Multi-bracket Validation.
+
+### Challenge Description
+The function should take a string as its only argument, and should return a boolean representing whether or not the brackets in the string are balanced. There are 3 types of brackets:
+
+Round Brackets : ()
+Square Brackets : []
+Curly Brackets : {}
+
+### Approach & Efficiency
+In this challenge I used a stack
+First we will traverse the string, then we will initiate a char variable to store the traversing character 
+We will check the if it has an opining bracket, it will push it to the stack,then it will continue
+If current character is not opening bracket, then it must be closing. So stack cannot be empty at this point
+If the current character is a closing bracket (‘)’ or ‘}’ or ‘]’) then pop from stack and if the popped character is the matching starting bracket then fine else brackets are not balanced.
+After complete traversal, if there is some starting bracket left in stack then “not balanced”
+
+
+### Solution
+![whiteboard](../assets/Multi-bracket.JPG)
+
