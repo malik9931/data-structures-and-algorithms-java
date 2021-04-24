@@ -1,13 +1,13 @@
 package stacksandqueues;
 
-public class Node {
+public class Node<T> {
 
     Node next;
-    int value;
+    T value;
 
     // Connect each Node with the next Node
 
-    public Node(int val){
+    public Node(T val){
         this.value = val;
 //        next = null;
     }

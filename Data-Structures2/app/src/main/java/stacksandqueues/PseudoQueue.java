@@ -37,7 +37,7 @@ public class PseudoQueue {
         if(inputStack.top == null){
             throw new EmptyStackException();
         }else {
-            return inputStack.top.value;
+            return (int) inputStack.top.value;
         }
     }
 

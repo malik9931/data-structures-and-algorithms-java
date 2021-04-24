@@ -20,14 +20,14 @@ public class Stack {
         Node temp = top;
         top = top.next;
         temp.next = null;
-        return temp.value;
+        return (int) temp.value;
     }
 
     public int peek() throws Exception {
         if(isEmpty()){
             throw new Exception();
         }
-        return top.value;
+        return (int) top.value;
     }
 
     public boolean isEmpty(){
