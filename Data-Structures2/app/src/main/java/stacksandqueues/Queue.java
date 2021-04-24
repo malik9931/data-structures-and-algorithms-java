@@ -1,11 +1,11 @@
 package stacksandqueues;
 
-public class Queue {
-    Node front;
-    Node rear;
+public class Queue<T> {
+    Node<T> front;
+    Node<T> rear;
 
-    public void enqueue(int data){
-        Node newNode = new Node(data);
+    public void enqueue(T data){
+        Node<T> newNode = new Node<T>(data);
         if(isEmpty()){
             front = newNode;
             rear = newNode;
@@ -15,17 +15,17 @@ public class Queue {
         rear = newNode;
     }
 
-    public int dequeue(){
+    public T dequeue(){
         if(isEmpty()){
             throw new NullPointerException();
         }
-        Node temp = front;
+        Node<T> temp = front;
         front= front.next;
         temp.next = null;
         return temp.value;
     }
 
-    public int peek(){
+    public T peek(){
         if(isEmpty()){
             throw new NullPointerException();
         }

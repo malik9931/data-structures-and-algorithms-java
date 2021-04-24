@@ -133,6 +133,26 @@ We will Reverse the input Stack to get an output Stack, which we will use it to 
 
 ### Solution
 ![whiteboard](../assets/PseudoQueue.JPG)
+-------------------------------------------------------------------
+# Code Challenge: Class 12
+### Challenge Summary
+First-in, First out Animal Shelter.
+
+### Challenge Description
+Create a class called AnimalShelter which holds only dogs and cats. The shelter operates using a first-in, first-out approach.
+Implement the following methods:
+enqueue(animal): adds animal to the shelter. animal can be either a dog, or a cat object.
+dequeue(pref): returns either a dog or a cat. If pref is not "dog" or "cat" then return null.
+
+### Approach & Efficiency
+In this challenge I used a queue to enqueue the new animal in a queue list that realted to the animal type (Cats OR Dogs)
+the dequeue method will return either a dog or a cat.
+
+The Big O fot time is a constant relation O(1)
+The Big O fot Space is a linear relation O(n)
+
+### Solution
+![whiteboard](../assets/AnimalShelter.JPG)
 
 -------------------------------------------------------------------
 # Code Challenge: Class 13
