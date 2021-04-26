@@ -31,5 +31,7 @@ insertBefore(): add a new node with the given newValue immediately before the fi
 insertAfter(): add a new node with the given newValue immediately after the first value node
 
 
+
 ## Solution
+An edited picture
 ![whiteboard](../assets/Linked-List.JPG)
