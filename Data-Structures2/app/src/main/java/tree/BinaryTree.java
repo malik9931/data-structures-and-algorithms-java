@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BinaryTree {
-    Node root;
+    Node root = null;
 
 
     //----------Constructors--------------------
@@ -19,74 +19,40 @@ public class BinaryTree {
     //---------preOrder-----------
 
         ArrayList<Integer> preOrderList = new ArrayList<>();
-    public List<Integer> preOrder(Node rootVal){
-//        if (root == null){
-//            preOrder(root);
-//        }
-        root = rootVal;
-//        System.out.println("this is root.value= "+root.value);
-
-        preOrderList.add(root.value);
-//        System.out.println("This is root.left -> "+ root.left == null ? "null" : root.left.value);
-//        System.out.println("This is root.right -> "+ root.right);
-
-            Node prevNode = root.left;
-        if(root.left != null){
-            preOrder(root.left);
-//            System.out.println("if(root.left != null)"+ root.left);
-        }else {
-            preOrder(prevNode);
+    public List<Integer> preOrder(Node node){
+        if(node != null){
+//            System.out.println(" "+ node.value);
+            preOrderList.add(node.value);
+            preOrder(node.left);
+            preOrder(node.right);
         }
-//        if (root.right != null){
-//            preOrder(root.right);
-//            System.out.println("if(root.right != null)"+ root.right.value);
-
-//        }
         return preOrderList;
     }
 
     //---------inOrder-------
-    public List<Integer> inOrder(Node newVal){
-        root = newVal;
-        ArrayList<Integer> result = new ArrayList<>();
-        if (root.left != null)
-            inOrder(root.left);
-        System.out.println(root);
-        result.add(root.value);
-        if (root.right != null)
-            inOrder(root.right);
-
-        return result;
+        ArrayList<Integer> inOrderList = new ArrayList<>();
+    public List<Integer> inOrder(Node node){
+        if (node != null){
+            inOrder(node.left);
+            inOrderList.add(node.value);
+//            System.out.println(" "+ node.value);
+            inOrder(node.right);
+        }
+        return inOrderList;
     }
 
     //---------Post-order-------
 
-//    ALGORITHM postOrder(root)
-//// INPUT <-- root node
-//// OUTPUT <-- post-order output of tree node's values
-//
-//    if root.left is not NULL
-//    postOrder(root.left)
-//
-//    if root.right is not NULL
-//    postOrder(root.right)
-//
-//    OUTPUT <-- root.value
+        ArrayList<Integer> postOrderList = new ArrayList<>();
+    public List<Integer> postOrder(Node node){
 
-    public List<Integer> postOrder(Node newVal){
-        root = newVal;
-
-        ArrayList<Integer> resultList = new ArrayList<>();
-        if (root.left != null)
-            postOrder(root.left);
-
-        if (root.right != null)
-            postOrder(root.right);
-
-        System.out.println(root);
-        resultList.add(root.value);
-
-        return resultList;
+        if(node != null){
+            postOrder(node.left);
+            postOrder(node.right);
+            postOrderList.add(node.value);
+//            System.out.println(" "+node.value);
+        }
+        return postOrderList;
     }
     //-----------toString---------------------
 
@@ -111,6 +77,6 @@ public class BinaryTree {
 //        return result;
         return "BinaryTree{" +
                 "root=" + root.value +
-                '}'+", Left Node: "+ root.left.value + ", Right Node: " + root.right.value;
+                '}'+", Left Node: "+ (root.left !=null ? root.left.value : "Null") + ", Right Node: " + (root.right !=null ? root.right.value : "Null");
     }
 }
