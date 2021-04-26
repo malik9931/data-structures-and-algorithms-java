@@ -14,3 +14,4 @@ Stacks and Queues Implementation| [Link](/Data-Structures2/app/src/main/java/sta
 Implement a Queue using two Stacks| [Link](/Data-Structures2/app/src/main/java/stacksandqueues)
 Animal Shelter| [Link](/Data-Structures2/app/src/main/java/utilities)
 Multi-bracket Validation| [Link](/Data-Structures2/app/src/main/java/utilities)
+Trees| [Link](/Data-Structures2/app/src/main/java/tree)
