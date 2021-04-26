@@ -4,35 +4,74 @@
 package Data.Structures2;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+
 
     public static void main(String[] args) {
 
 // create an object of a linkedList
-        Linkedlist linkedList = new Linkedlist();
-//
-        //Assign the head
-        linkedList.head = new Node("a");
-        Node second = new Node("b");
-        Node third = new Node("c");
+        Linkedlist linkedList1 = new Linkedlist();
+        Linkedlist linkedList2 = new Linkedlist();
+
+
+        //Inserting Data for linkedList2
+        linkedList2.insert(11);
+        linkedList2.insert(22);
+        linkedList2.insert(33);
+
+
+        //Assign the head of linkedList1
+//        Node first = linkedList1.head = new Node(1);
+//        Node second = new Node(2);
+//        Node third = new Node(3);
+
+        //Assign the head of linkedList2
+//        linkedList1.head = new Node("1");
+//        Node two = new Node("2");
+//        Node three = new Node("3");
+
 
         //connecting the nodes
-        linkedList.head.next = second;
-        second.next = third;
+//        linkedList1.head.next = second;
+//        second.next = third;
+
+        //connecting the nodes
+//        linkedList2.head.next = two;
+//        two.next = three;
         try {
-            linkedList.insert("first");
-            System.out.println(linkedList.includes("a"));
-            linkedList.insertBefore("first","Before first");
-            linkedList.append("last");
-            linkedList.insertBefore("last","Before last");
-            linkedList.insertAfter("sd","After c");
-            System.out.println(linkedList.toString());
+
+            linkedList1.insert(9);
+            linkedList1.insert(1);
+            linkedList1.insert(3);
+
+
+            //            System.out.println(linkedList1.includes(1));
+//            linkedList1.insertBefore(1,12);
+//            linkedList1.append(2);
+//            linkedList1.append(1);
+//            linkedList1.append(1);
+
+//            linkedList1.insertBefore(2,45);
+//            linkedList1.insertAfter(3,2);
+            System.out.println(linkedList1);
+
+            System.out.println(linkedList2);
+
+//            System.out.println(linkedList1.kthFromEnd(2));
+
+//            System.out.println(linkedList1.size());
+//            System.out.println(linkedList1.kthFromEnd(3));
+//            System.out.println(Linkedlist.palindrome(first));
+
+
+            //Merging
+            System.out.println(linkedList1);
+            System.out.println(linkedList2);
+
+            System.out.println(Linkedlist.zipLists(linkedList1,linkedList2));
 
 
         }catch (Exception ex){
-            System.out.println("error in: "+ ex);
+            System.out.println("error is: "+ ex);
         }
 
         //printing the node
