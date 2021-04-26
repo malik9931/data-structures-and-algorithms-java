@@ -1,3 +1,4 @@
+
 # Singly Linked List
 Linked List Implementation
 
@@ -31,7 +32,9 @@ insertBefore(): add a new node with the given newValue immediately before the fi
 insertAfter(): add a new node with the given newValue immediately after the first value node
 
 
+
 ## Solution
+An edited picture
 ![whiteboard](../assets/Linked-List.JPG)
 
 ---------------------------------------------------------------------------
@@ -177,4 +180,3 @@ After complete traversal, if there is some starting bracket left in stack then â
 
 ### Solution
 ![whiteboard](../assets/Multi-bracket.JPG)
-
