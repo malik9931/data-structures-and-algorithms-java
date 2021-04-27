@@ -52,5 +52,9 @@ public class treeTest {
         System.out.println("Expected value for contains method for the BST for exist value is: " + true+ ", And the Actual is: "+newBST.contains(2));
         System.out.println("Expected value for contains method for the BST for exist value is: " + false+ ", And the Actual is: "+newBST.contains(5));
 
+
+        // Find the max value in the Binary Tree
+        System.out.println("Expected max value in the newTree BT is: " + 3+ ", And the Actual is: "+newTree.findMaximumValue(one));
+
     }
 }

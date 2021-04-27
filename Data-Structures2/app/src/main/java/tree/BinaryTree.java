@@ -54,6 +54,29 @@ public class BinaryTree {
         }
         return postOrderList;
     }
+
+    //------------Find Max Value--------------
+//    Node current = root;
+    public Integer findMaximumValue(Node node){
+
+//        if(root == null){
+//            return Integer.MIN_VALUE;
+//
+//        }
+//        return Math.max(root.value, Math.max(findMaximumValue(root.left),findMaximumValue(root.right)));
+        if (node == null)
+            return Integer.MIN_VALUE;
+
+        int res = node.value;
+        int lres = findMaximumValue(node.left);
+        int rres = findMaximumValue(node.right);
+
+        if (lres > res)
+            res = lres;
+        if (rres > res)
+            res = rres;
+        return res;
+    }
     //-----------toString---------------------
 
     @Override
@@ -64,17 +87,6 @@ public class BinaryTree {
                 "root=" + null +
                 '}';
 
-//        String result = "";
-//        Node current = root;
-//        result = result + "{BinaryTree{root=" + current.value +" }  ";
-//
-//        while (current != null){
-//            result = result + "{BinaryTree{root=" + current.value +" }  ";
-//
-//            current = current.left;
-//        }
-//        result = result+"NULL";
-//        return result;
         return "BinaryTree{" +
                 "root=" + root.value +
                 '}'+", Left Node: "+ (root.left !=null ? root.left.value : "Null") + ", Right Node: " + (root.right !=null ? root.right.value : "Null");
