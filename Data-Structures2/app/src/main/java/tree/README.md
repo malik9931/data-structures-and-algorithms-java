@@ -20,22 +20,40 @@ First, we have to find the place where we want to add a new node in order to kee
 * when the current node is null, we've reached a leaf node and we can insert the new node in that position
 
 Finding an Element
-By creating a recursive method that traverses the tree `containsNodeRecursive`
+By creating a recursive method that traverses the tree `containsNodeRecursive`\
 By searching for the value by comparing it to the value in the current node, then continue in the left or right child depending on that
 
 ## API
 ## Methods
 Binary Search Tree Class
-`add();`
-accepts a value, and adds a new node with that value in the correct location in the binary search tree.
+`add();`\
+accepts a value, and adds a new node with that value in the correct location in the binary search tree.\
 Big O time complexity: O(height)
 
-`contains();`
-accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
+`contains();`\
+accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.\
 The Big O space complexity: O(1)
 
 Binary Tree Class
-Each method changes the order in which we search/print the root:
-`preOrder();`=> root >> left >> right
-`inOrder();`=> left >> root >> right
+Each method changes the order in which we search/print the root:\
+`preOrder();`=> root >> left >> right\
+`inOrder();`=> left >> root >> right\
 `postOrder();`=> left >> right >> root
+
+---------------------------------------------------------------------------------------
+# Code Challenge: Class 16
+### Challenge Summary
+Find Max Value
+
+### Challenge Description
+findMaxValue() is an instance method in the Binary Tree Class that returns the maximum value stored in the tree. You can assume that the values stored in the Binary Tree will be numeric. There are two variables that keep track of the current highest value, and the highest value found thus far. The method is built using recursion to do a pre-order traversal of the tree.
+
+### Approach & Efficiency
+`findMaxValue();`\
+Big O time complexity: O(n)
+The Big O space complexity: O(1)
+
+
+### Solution
+I wasn't able to get it from assetes folder U will find it there
+![whiteboard](../assets/findMaxValBT.jpg)

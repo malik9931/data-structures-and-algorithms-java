@@ -13,10 +13,10 @@ public class treeApp {
         one.left = two;
         one.right = three;
 //        System.out.println(one);
+        System.out.println(newTree.findMaximumValue(one));
         System.out.println(newTree.preOrder(one));
         System.out.println(newTree.inOrder(one));
         System.out.println(newTree.postOrder(one));
-
 
         //Creating Binary Search Tree
 //        Node firstRoot = new Node(23);
