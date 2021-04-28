@@ -1,7 +1,6 @@
 package tree;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class BinaryTree {
     Node root = null;
@@ -76,6 +75,33 @@ public class BinaryTree {
         if (rres > res)
             res = rres;
         return res;
+    }
+
+    //---------------- Breadth First Traversing  --------------
+
+    public List<Integer> breadthFirst(Node root){
+        this.root = root;
+        if (root == null){
+            throw new NoSuchElementException();
+        }
+        Queue<Node> breadth = new LinkedList<>();
+        ArrayList<Integer> breadthFirstList = new ArrayList();
+
+        breadth.add(root);
+
+        while (!breadth.isEmpty()){
+            Node front = (Node) breadth.remove();
+            breadthFirstList.add(front.value);
+
+            if (front.left != null){
+                breadth.add(front.left);
+            }
+            if (front.right != null){
+                breadth.add(front.right);
+            }
+
+        }
+        return  breadthFirstList;
     }
     //-----------toString---------------------
 

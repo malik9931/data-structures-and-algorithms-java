@@ -55,5 +55,27 @@ The Big O space complexity: O(1)
 
 
 ### Solution
-I wasn't able to get it from assetes folder U will find it there
-![whiteboard](../assets/findMaxValBT.jpg)
+![whiteboard](./treeAssets/findMaxValBT.jpg)
+
+---------------------------------------------------------------------------------------
+# Code Challenge: Class 17
+### Challenge Summary
+Breadth-first Traversal
+
+### Challenge Description
+We create a method which takes a Binary Tree as its unique input, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+
+
+### Approach & Efficiency
+We check a list of children instead of a left and right child properties.
+1. We will still start at the root Node, and we will add it to our queue.
+2. As long as we have a node in our queue we can dequeue.
+3. With every Node we dequeue, we check it’s list of children and enqueue each one.
+
+`breadthFirst();`\
+Big O Space complexity: O(n)
+The Big O Time complexity: O(n)
+
+
+### Solution
+![whiteboard](./treeAssets/breadthFirst.jpg)

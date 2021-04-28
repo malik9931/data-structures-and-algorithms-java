@@ -18,6 +18,7 @@ public class treeApp {
         System.out.println(newTree.inOrder(one));
         System.out.println(newTree.postOrder(one));
 
+            System.out.println("breadthFirst Traversing"+newTree.breadthFirst(one));
         //Creating Binary Search Tree
 //        Node firstRoot = new Node(23);
 //        newBST.root = firstRoot;
@@ -26,6 +27,7 @@ public class treeApp {
         newBST.add(4);
         newBST.add(2);
             System.out.println(newBST.contains(5));
+
 //        System.out.println(newBST.toString());
 
         }catch (NullPointerException ex){

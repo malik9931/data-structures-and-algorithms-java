@@ -7,7 +7,6 @@ public class BinarySearchTree{
     public BinarySearchTree() {
         this.root = null;
     }
-
     private Node addRecursive(Node current, int value){
 
         if (current == null){

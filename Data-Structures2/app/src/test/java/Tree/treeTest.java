@@ -56,5 +56,7 @@ public class treeTest {
         // Find the max value in the Binary Tree
         System.out.println("Expected max value in the newTree BT is: " + 3+ ", And the Actual is: "+newTree.findMaximumValue(one));
 
+        // Breadth-first Traversal
+        System.out.println("Expected Breadth-first Traversal value for the newTree BT is: " + "[1, 2, 3]"+ ", And the Actual is: "+newTree.breadthFirst(one));
     }
 }
