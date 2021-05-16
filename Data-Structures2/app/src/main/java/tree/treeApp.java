@@ -12,6 +12,8 @@ public class treeApp {
         System.out.println("2nd Tree: "+scndTree.toString());
         one.left = two;
         one.right = three;
+        Node test = new Node(5);
+        two.right = test;
 //        System.out.println(one);
         System.out.println(newTree.findMaximumValue(one));
         System.out.println(newTree.preOrder(one));
@@ -22,6 +24,16 @@ public class treeApp {
         //Creating Binary Search Tree
 //        Node firstRoot = new Node(23);
 //        newBST.root = firstRoot;
+
+        System.out.println("suMMM: "+newTree.sumOdd(newTree.breadthFirst(one)));
+//        int ind = 0;
+//        int k = 3, n = 10;
+//        int[] preorder = { 1, 2, 5, 6, 7, 3, 8, 9, 10, 4 };
+//        Tree.Node root = Tree.BuildKaryTree_1(preorder, n, k, ind);
+//        System.out.println("Postorder traversal of " +
+//                "constructed full k-ary tree is: ");
+//        Tree.postord(root, k);
+//        System.out.println();
         try {
         BinarySearchTree newBST = new BinarySearchTree();
         newBST.add(4);
