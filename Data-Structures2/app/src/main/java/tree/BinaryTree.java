@@ -3,7 +3,8 @@ package tree;
 import java.util.*;
 
 public class BinaryTree {
-    Node root = null;
+//    Node root = null;
+    Node root;
 
 
     //----------Constructors--------------------
@@ -102,6 +103,23 @@ public class BinaryTree {
 
         }
         return  breadthFirstList;
+    }
+
+    //-------------- summation of odd ------------
+
+    public Integer sumOdd(List<Integer> myList){
+        if (root == null){
+            throw new NoSuchElementException();
+        }
+//        List<Integer> myList = myTree.breadthFirst(this.root);
+
+        Integer sum = 0;
+        for (Integer number : myList ){
+            if (!(number%2 == 0)){
+                sum = sum + number;
+            }
+        }
+        return sum;
     }
     //-----------toString---------------------
 
