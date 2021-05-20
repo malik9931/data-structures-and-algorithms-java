@@ -49,7 +49,7 @@ InsertionSort(int[] arr)
 ````
 
 ### Working Code
-[Working Code for insertion sort](/sort/InsertionSort.java)
+[Working Code for insertion sort](/Data-Structures2/app/src/main/java/sort/InsertionSort.java)
 
 ### Testing
-[Testing for insertion sort](/../../test/java/sort/InsertionSortTest.java)
+[Testing for insertion sort](/Data-Structures2/app/src/test/java/sort/InsertionSortTest.java)
