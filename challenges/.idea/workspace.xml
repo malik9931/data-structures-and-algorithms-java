@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7f4f53e-0545-4af2-8b5c-e3d1cb24db04" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/sort/InsertionSort.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/InsertionSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sort/blog.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Data-Structures2/app/src/main/java/sort/InsertionSort.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Data-Structures2/app/src/test/java/sort/InsertionSortTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ArrayShift/ArrayShiftTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayShift/ArrayShiftTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/challenges/sort/blog.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort/InsertionSort.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort/InsertionSort.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sort/blog.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/sort/InsertionSortTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Data-Structures2/app/src/main/java/sort/blog.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,6 +69,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
