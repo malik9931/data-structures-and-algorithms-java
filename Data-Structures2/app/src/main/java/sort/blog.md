@@ -122,3 +122,74 @@ ALGORITHM Merge(left, right, arr)
 
 ### Testing
 [Testing for Merge sort](/Data-Structures2/app/src/test/java/sort/MergeSortTest.java)
+
+
+----------------------------------------------------------------------------------------
+## Quick Sort
+QuickSort is a Divide and Conquer algorithm. It picks an element as pivot and partitions the given array around the picked pivot.
+
+### Learning Objectives
+* Understand what a how the Quick sort occurs, what it is not good at, and how it sorts a list.
+
+### Diagram
+![Quick sort](../sort/screenShots/quick.jpg)
+
+### Algorithm
+
+Given an array of N items, Quick Sort will:
+
+- Consider the last element of the list as pivot 
+- We reorder all the elements around the pivot – the ones with smaller value are placed before it, and all the elements greater than the pivot after it. 
+- The pivot is in its final position. 
+- We apply the above steps recursively to both sub-lists on the left and right of the pivot.
+
+
+### Time and complexity
+Time complexity of Quick Sort is, for:
+ Best case: the algorithim willl dived the list into two equal size sub-lists,  So, the first iteration of the full n-sized list needs O(n). Sorting the remaining two sub-lists with n/2 elements takes 2*O(n/2) each. As a result, the QuickSort algorithm has the complexity of O(n log n).
+
+ Worst case: the algorithm will select only one element in each iteration, so O(n) + O(n-1) + … + O(1), which is equal to O(n2).
+
+ Average case: O(n*Log n) as it always divides the array in two halves and takes linear time to sort two halves.
+Space complexity: O(n) ,It requires equal amount of additional space as the unsorted array.
+
+
+### Pseudocode
+````java
+ALGORITHM QuickSort(arr, left, right)
+    if left < right
+        // Partition the array by setting the position of the pivot value 
+        DEFINE position <-- Partition(arr, left, right)
+        // Sort the left
+        QuickSort(arr, left, position - 1)
+        // Sort the right
+        QuickSort(arr, position + 1, right)
+
+ALGORITHM Partition(arr, left, right)
+    // set a pivot value as a point of reference
+    DEFINE pivot <-- arr[right]
+    // create a variable to track the largest index of numbers lower than the defined pivot
+    DEFINE low <-- left - 1
+    for i <- left to right do
+        if arr[i] <= pivot
+            low++
+            Swap(arr, i, low)
+
+     // place the value of the pivot location in the middle.
+     // all numbers smaller than the pivot are on the left, larger on the right. 
+     Swap(arr, right, low + 1)
+    // return the pivot index point
+     return low + 1
+
+ALGORITHM Swap(arr, i, low)
+    DEFINE temp;
+    temp <-- arr[i]
+    arr[i] <-- arr[low]
+    arr[low] <-- temp
+````
+
+### Working Code
+[Working Code for Quick sort](/Data-Structures2/app/src/main/java/sort/QuickSort.java)
+
+### Testing
+[Testing for Quick sort](/Data-Structures2/app/src/test/java/sort/QuickSortTest.java)
