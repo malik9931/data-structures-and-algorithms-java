@@ -18,4 +18,4 @@ tree_intersection(tree.BinaryTree tree1 , tree.BinaryTree tree2)
         * no -> keep looping
 
 ### Solution
-![whiteboard](/)
+![whiteboard](TreeIntersectionSS.jpg)

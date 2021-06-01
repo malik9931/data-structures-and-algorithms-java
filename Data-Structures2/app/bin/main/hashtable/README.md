@@ -38,3 +38,38 @@ Space Complexity: O(1),since it is updating a one variable.
 
 ### Solution
 ![whiteboard](../hashtable/screenShots/repeatedWord.jpg)
+
+
+-------------------------------------------------------------------------
+# Code Challenge: Class 33
+### Challenge Summary
+Implement a simplified LEFT JOIN for 2 Hashmaps.
+
+### Challenge Description
+Write a function that LEFT JOINs two hashmaps into a single data structure.
+The first parameter is a hashmap that has word strings as keys, and a synonym of the key as values.
+The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values.
+Combine the key and corresponding values (if they exist) into a new data structure according to LEFT JOIN logic.
+
+leftJoin(Hashtable map1 , Hashtable  map2)
+
+
+### Approach & Efficiency
+
+Given 2 Hash Map:
+Traverse throw first Hash map keys.
+Declare resultList of arrays that will contains [ [keyA, val1, val2] , [keyB, val1, val2], ... ]
+add the key of the first hash map to the first element in the index of the resultList.
+add the value of the key in the 1st hash map to the 2nd element in the index of the resultList.
+check if the same key is exist in the 2nd hash map
+true -> add its value to 3rd element in the index of the resultList.
+false -> add NULL to 3rd element in the index of the resultList.
+return the resultList.
+
+
+Big O:
+Time Complexity: O(n), since it use a single loop.
+Space Complexity: O(n), since it use a list of arrays depending on the 1st hash table size.
+
+### Solution
+![whiteboard](../hashtable/screenShots/LeftJoin.jpg)
