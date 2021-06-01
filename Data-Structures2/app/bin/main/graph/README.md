@@ -26,9 +26,7 @@ Check if the node has been visited already.
 Add the node's children to the end of the queue.
 Repeat while the queue still contains one or more nodes.
 
-Big O:
-Time Complexity: O(n^2), since it use a double loop.
-Space Complexity: O(n), since it use a list of arrays.
+
 
 ### Solution
-![whiteboard](screenShots/bft.jpg)
+![whiteboard]()

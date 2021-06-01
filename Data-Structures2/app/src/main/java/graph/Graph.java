@@ -1,6 +1,8 @@
 package graph;
 
 import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Graph<T> {
 
@@ -8,6 +10,10 @@ public class Graph<T> {
 
     public Graph(HashSet<Node<T>> nodeInGraph) {
         this.nodeInGraph = nodeInGraph;
+    }
+
+    public Graph() {
+
     }
 
     //Methods
@@ -54,5 +60,31 @@ public class Graph<T> {
         return this.nodeInGraph.size();
     }
 
+    //Implement a breadth-first traversal on a graph.
+    public List<T> bFT (Node<T> startingNode){
+        LinkedList<Node<T>> queNodesToProcess = new LinkedList<>();
+        HashSet<Node<T>> visited = new HashSet<>();
+        List<T> traversalCollection = new LinkedList<>();
+
+        queNodesToProcess.add(startingNode);
+
+        while (!queNodesToProcess.isEmpty()){
+            Node<T> currentNode = queNodesToProcess.removeFirst();
+            if (!visited.contains(currentNode)){
+                visited.add(currentNode);
+                traversalCollection.add(currentNode.getValue());
+            }
+
+            HashSet<Node<T>> neighborNodes = getNeighbors(currentNode);
+
+            for (Node<T> neighbor:neighborNodes) {
+                if (!visited.contains(neighbor)){
+                    queNodesToProcess.add(neighbor);
+                }
+            }
+
+        }
+        return traversalCollection;
+    }
 
 }
