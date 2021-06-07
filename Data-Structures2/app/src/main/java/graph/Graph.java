@@ -8,13 +8,21 @@ public class Graph<T> {
 
     HashSet<Node<T>> nodeInGraph;
 
+    // == Constructor ==
+    public Graph () {
+        this.nodeInGraph = new HashSet<Node<T>>() {
+        };
+    }
+
+
     public Graph(HashSet<Node<T>> nodeInGraph) {
+
         this.nodeInGraph = nodeInGraph;
     }
 
-    public Graph() {
-
-    }
+//    public Graph() {
+//
+//    }
 
     //Methods
     // Add new Node
