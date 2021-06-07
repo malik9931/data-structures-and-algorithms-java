@@ -32,3 +32,33 @@ Space Complexity: O(n), since it use a list of arrays.
 
 ### Solution
 ![whiteboard](screenShots/bft.jpg)
+
+-------------------------------------------------------------------
+# Code Challenge: Class 38
+### Challenge Summary
+Conduct a depth first preorder traversal on a graph
+
+### Challenge Description
+Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
+
+preDepth(Graph<T> graph, Node<T> startingNode)
+
+### Approach & Efficiency
+
+
+Make a set to keep track of what's been seen in the graph
+Make a list to hold the values in the graph
+Return the output of the private method
+Keep track of what we've seen so far in a method, then pass that down to a helper method that takes that in as a param.
+preorder depth-first means you add the value first.
+seen needs to add the node and check to see if it was already there, in which case, the node also needs to be added to values.
+the preorder:
+    For each of the neighboring nodes, run the depth-first traversal on them.
+
+
+Big O:
+Time complexity: O(V + E), where V is the number of vertices and E is the number of edges in the graph.
+Space Complexity :O(V). Since an extra visited array is needed of size V.
+
+### Solution
+![whiteboard](screenShots/dfs.jpg)
